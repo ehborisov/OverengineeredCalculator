@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           targetNamespace="urn:beans.calc.example.com"
+           jaxb:version="1.0">
+
+    <xs:complexType name="expressionData">
+        <xs:sequence>
+            <xs:element name="expression" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="expressionValue">
+        <xs:sequence>
+            <xs:element name="result" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
