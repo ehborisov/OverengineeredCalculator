@@ -34,16 +34,7 @@
             <artifactId>okhttp-urlconnection</artifactId>
             <version>3.2.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>logging-interceptor</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>ru.qatools.commons</groupId>
-            <artifactId>properties</artifactId>
-            <version>2.0.RC5</version>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -53,13 +44,25 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
                 <configuration>
-                    <trimStackTrace>false</trimStackTrace>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>

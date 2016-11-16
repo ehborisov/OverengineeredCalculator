@@ -17,4 +17,10 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="calcErrorData">
+        <xs:sequence>
+            <xs:element name="details" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
 </xs:schema>
